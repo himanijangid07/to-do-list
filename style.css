@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, rgb(55, 0, 255), rgb(127, 3, 243));
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.to-do {
+    width: 100%;
+    max-width: 560px;
+    background-color: white;
+    margin: 100px auto 200px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.to-do h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row input {
+    height: 40px;
+    width: 70%;
+    margin-left: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.row button {
+    width: 70px;
+    font-size: 15px;
+    color: white;
+    background-color: orangered;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.list ul li {
+    list-style-type: none;
+    margin-left: 40px;
+    margin-top: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url(images/unchecked.png);
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-position: center;
+    left: -30px;
+    top: -1px;
+}
+
+.list ul li.checked {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.list ul li.checked::before {
+    background-image: url(images/checked.jpg);
+}
